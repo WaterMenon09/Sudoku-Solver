@@ -35,7 +35,6 @@ Example
 0 4 0 0 5 0 0 3 6
 7 0 3 0 1 8 0 0 0
 
-
 Output Format
 The solved Sudoku puzzle will be written to sudoku_solved.txt in the same format as the input file.
 
