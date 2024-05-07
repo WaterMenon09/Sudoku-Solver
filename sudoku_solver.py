@@ -30,7 +30,7 @@ def solveSudoku(grid, row, col):
         row += 1
         col = 0
 
-    if int(grid[row][col]) > 0:  # if num present
+    if grid[row][col] > 0:  # if num present
         return solveSudoku(grid, row, col + 1)  # check next slot
     for num in range(1, size + 1, 1):  # check which number fits
         if ifSafe(grid, row, col, num):  # check if num fits
@@ -46,7 +46,7 @@ def readSudokuFromFile(filename):
     with open(filename, 'r') as file:
         sudoku = []
         for line in file:
-            row = line.strip().split()
+            row = list(map(int, line.strip().split()))  # convert to integers
             sudoku.append(row)
         return sudoku
 
